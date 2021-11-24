@@ -34,6 +34,7 @@ func (ctrl CommonController) GetCommonMaster(c *gin.Context){
 		var response = gin.H{
 			"success": bool(false),
 			"message": "Could not get data",
+			"data" : catToItemSlice,
 		}
 		c.AbortWithStatusJSON(http.StatusNotAcceptable, gin.H{"api_response": response})
 		return
