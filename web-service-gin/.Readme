@@ -1,0 +1,10 @@
+Install Golang -> https://go.dev/doc/install
+go get -u github.com/gin-gonic/gin
+go get -u github.com/lib/pq
+go mod tidy
+go run .
+
+Eg. for folder:
+go mod init "gotest"
+go mod edit -replace mmi.com/testgo=./testgo/
+go get .
