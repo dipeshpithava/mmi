@@ -17,6 +17,8 @@ func main() {
 	{
 		common := new(controllers.CommonController)
 		v1.GET("/getCommonMaster", common.GetCommonMaster)
+		login := new(controllers.LoginController)
+		v1.POST("/isUserExists", login.IsUserExists)
 	}
 	r.Run(":8080")
 }
