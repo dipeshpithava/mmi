@@ -13,8 +13,9 @@ type userprofilemaster struct{
 	Username string `json:"username"`
 }
 
-func (m LoginModel) IsUserExists() (commonJson []userprofilemaster, err error){
-	_, err = db.GetDB().Select(&commonJson, "SELECT emailid, mobileno, panno, username FROM cmn.userprofilemaster")
+func (m LoginModel) IsUserExists(panno string) (commonJson []userprofilemaster, err error){
+	print(panno)
+	_, err = db.GetDB().Select(&commonJson, "SELECT emailid, mobileno, panno, username FROM cmn.userprofilemaster where panno = $1", panno)
 	return commonJson,err;
 }
 
