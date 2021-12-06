@@ -12,12 +12,7 @@ For existing user ->
 
 {
     "response": {
-        "data": {
-            "emailid": "dipesh@yopmail.com",
-            "mobileno": "9999999999",
-            "panno": "ABCDE1234F",
-            "username": "dipesh"
-        },
+        "data": "",
         "message": "Existing User",
         "success": true
     }
@@ -30,5 +25,28 @@ For new user ->
         "data": "",
         "message": "New User",
         "success": false
+    }
+}
+
+------------------------------------------------------------------------------------------------
+
+URL:
+http://127.0.0.1:8080/v1/getUserData
+
+Request:
+{"panno": "ABCDE1234F"}
+
+Response:
+
+{
+    "response": {
+        "data": {
+            "emailid": "dipesh@yopmail.com",
+            "mobileno": "9999999999",
+            "panno": "ABCDE1234F",
+            "username": "dipesh"
+        },
+        "message": "Existing User",
+        "success": true
     }
 }

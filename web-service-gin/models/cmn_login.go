@@ -14,8 +14,11 @@ type userprofilemaster struct{
 }
 
 func (m LoginModel) IsUserExists(panno string) (commonJson []userprofilemaster, err error){
-	print(panno)
-	_, err = db.GetDB().Select(&commonJson, "SELECT emailid, mobileno, panno, username FROM cmn.userprofilemaster where panno = $1", panno)
+	_, err = db.GetDB().Select(&commonJson, "SELECT emailid, mobileno, panno, username FROM cmn.userprofilemaster a inner join cmn.userprofiledet b on a.uid = b.uid where a.panno = $1", panno)
 	return commonJson,err;
 }
 
+func (m LoginModel) GetUserData(panno string) (commonJson []userprofilemaster, err error){
+	_, err = db.GetDB().Select(&commonJson, "SELECT emailid, mobileno, panno, username FROM cmn.userprofilemaster a inner join cmn.userprofiledet b on a.uid = b.uid where a.panno = $1", panno)
+	return commonJson,err;
+}
