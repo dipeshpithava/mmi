@@ -14,7 +14,7 @@ type commonmaster struct{
 }
 
 func (m MFCommonModel) GetCommonMFAll() (commonJson []commonmaster, err error){
-	_, err = db.GetDB().Select(&commonJson, "SELECT comnid, typedet, codedesc, nsecode FROM cmn.commonmaster")
+	_, err = db.GetDB().Select(&commonJson, "SELECT comnid, typedet, codedesc, nsecode FROM mf.commonmaster")
 	return commonJson,err;
 }
 
