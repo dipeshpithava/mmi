@@ -16,10 +16,12 @@ func main() {
     v1 := r.Group("/v1")
 	{
 		common := new(controllers.CommonController)
-		v1.GET("/getCommonMaster", common.GetCommonMaster)
 		login := new(controllers.LoginController)
+		kyc := new(controllers.KycController)
+		v1.GET("/getCommonMaster", common.GetCommonMaster)
 		v1.POST("/isUserExists", login.IsUserExists)
 		v1.POST("/getUserData", login.GetUserData)
+		v1.POST("/getCVLData", kyc.CVLApi)
 	}
 	r.Run(":8080")
 }

@@ -8,3 +8,5 @@ require (
 )
 
 replace mmi.com/models => ../models/
+
+replace mmi.com/forms => ../forms/

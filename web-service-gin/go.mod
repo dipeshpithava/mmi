@@ -4,7 +4,6 @@ go 1.16
 
 require (
 	github.com/gin-gonic/gin v1.7.6
-	github.com/go-playground/validator/v10 v10.9.0 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
@@ -17,6 +16,7 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	mmi.com/controllers v0.0.0-00010101000000-000000000000
 	mmi.com/db v0.0.0-00010101000000-000000000000
+	mmi.com/forms v0.0.0-00010101000000-000000000000 // indirect
 	mmi.com/models v0.0.0-00010101000000-000000000000 // indirect
 )
 
@@ -27,3 +27,5 @@ replace mmi.com/models => ./models/
 replace mmi.com/db => ./db/
 
 replace mmi.com/testgo => ./testgo/
+
+replace mmi.com/forms => ./forms/
