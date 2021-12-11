@@ -11,6 +11,11 @@ type GetKyc struct {
 	PAN string `json:"pan" binding:"required,min=10,max=10"`
 }
 
+type RequestMaster struct {
+	ApiName string `json:"api_name" binding:"required"`
+	Request GetKyc `json:"request" binding:"required"` 
+}
+
 
 func (f KycForm) PAN(tag string, errMsg ...string) (message string) {
 	switch tag {
