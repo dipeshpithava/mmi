@@ -1,0 +1,27 @@
+URL : http://localhost:8080/v1/getCVLData
+
+REQUEST :
+{
+    "api_name":"GET_CVL_DATA",
+    "request" : {
+        "pan" : "AJCPT7078C"
+    }
+}
+
+
+RESPONSE :
+{
+    "api_response": {
+        "response": {
+            "api_name": "GET_CVL_DATA",
+            "data": {
+                "kyc_name": "Test Yadav",
+                "kyc_status": "Y",
+                "msg": "",
+                "pan": "AJCPT7078C"
+            }
+        },
+        "success": true
+    }
+}
+
