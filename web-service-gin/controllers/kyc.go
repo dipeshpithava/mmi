@@ -19,7 +19,7 @@ func (ctrl KycController) CVLApi(c *gin.Context) {
 	}
 
 	if form.ApiName != "GET_CVL_DATA" {
-		c.AbortWithStatusJSON(http.StatusNotAcceptable, gin.H{"err": "wrong api details"})
+		c.AbortWithStatusJSON(http.StatusNotAcceptable, gin.H{"err": "API DETAILS INCORRECT"})
 		return
 	}
 
