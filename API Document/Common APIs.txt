@@ -1,0 +1,485 @@
+URL : http://localhost:8080/v1/getCommonMaster
+
+REQUEST :
+{
+    "api_name":"GET_COMMON_MASTER",
+    "request" : {
+    }
+}
+
+RESPONSE :
+
+{
+    "api_response": {
+        "response": {
+            "api_name": "GetCommonMaster",
+            "data": {
+                "AccountType": [
+                    {
+                        "label": "Savings Account",
+                        "value": "SB"
+                    },
+                    {
+                        "label": "Current Account",
+                        "value": "CA"
+                    },
+                    {
+                        "label": "Non Resident External Account",
+                        "value": "NRE"
+                    },
+                    {
+                        "label": "Non Resident Ordinary",
+                        "value": "NRO"
+                    },
+                    {
+                        "label": "Cash/Credit",
+                        "value": "CC"
+                    },
+                    {
+                        "label": "Foreign Currency Non Resident",
+                        "value": "FCNR"
+                    },
+                    {
+                        "label": "Overdraft Account",
+                        "value": "OD"
+                    },
+                    {
+                        "label": "Post Office Savings Bank Account",
+                        "value": "PSB"
+                    }
+                ],
+                "AddressType": [
+                    {
+                        "label": "Residential or Business",
+                        "value": "1"
+                    },
+                    {
+                        "label": "Residential",
+                        "value": "2"
+                    },
+                    {
+                        "label": "Business",
+                        "value": "3"
+                    },
+                    {
+                        "label": "Registered office",
+                        "value": "4"
+                    },
+                    {
+                        "label": "Unspecified",
+                        "value": "5"
+                    }
+                ],
+                "ApplicableIncome": [
+                    {
+                        "label": "Below 1 Lakh",
+                        "value": "31"
+                    },
+                    {
+                        "label": "> 1 <=5 Lacs",
+                        "value": "32"
+                    },
+                    {
+                        "label": ">5 <=10 Lacs",
+                        "value": "33"
+                    },
+                    {
+                        "label": ">10 <= 25 Lacs",
+                        "value": "34"
+                    },
+                    {
+                        "label": "> 25 Lacs < = 1 Crore",
+                        "value": "35"
+                    },
+                    {
+                        "label": "Above 1 Crore",
+                        "value": "36"
+                    }
+                ],
+                "BusinessUnit": [
+                    {
+                        "label": "B2B",
+                        "value": "2"
+                    },
+                    {
+                        "label": "B2C",
+                        "value": "3"
+                    },
+                    {
+                        "label": "Corporate",
+                        "value": "4"
+                    },
+                    {
+                        "label": "Group",
+                        "value": "5"
+                    },
+                    {
+                        "label": "SE",
+                        "value": "7"
+                    },
+                    {
+                        "label": "UM",
+                        "value": "8"
+                    },
+                    {
+                        "label": "Walk",
+                        "value": "9"
+                    },
+                    {
+                        "label": "WMS",
+                        "value": "10"
+                    },
+                    {
+                        "label": "ABMU",
+                        "value": "11"
+                    },
+                    {
+                        "label": "BPG WORKSITE",
+                        "value": "12"
+                    }
+                ],
+                "HoldingNature": [
+                    {
+                        "label": "ANYONE / SURVIVOR",
+                        "value": "AS"
+                    },
+                    {
+                        "label": "EITHER/SURVIVOR",
+                        "value": "ES"
+                    },
+                    {
+                        "label": "JOINT",
+                        "value": "JO"
+                    },
+                    {
+                        "label": "SINGLE",
+                        "value": "SI"
+                    }
+                ],
+                "Identification": [
+                    {
+                        "label": "Company Identification Number",
+                        "value": "1"
+                    },
+                    {
+                        "label": "Driving License",
+                        "value": "2"
+                    },
+                    {
+                        "label": "Election ID Card",
+                        "value": "3"
+                    },
+                    {
+                        "label": "Global Entity Identification Number",
+                        "value": "4"
+                    },
+                    {
+                        "label": "ID Card",
+                        "value": "5"
+                    },
+                    {
+                        "label": "NREGA Job Card",
+                        "value": "6"
+                    },
+                    {
+                        "label": "Not categorized",
+                        "value": "7"
+                    },
+                    {
+                        "label": "Others",
+                        "value": "8"
+                    },
+                    {
+                        "label": "PAN Card",
+                        "value": "9"
+                    },
+                    {
+                        "label": "Passport",
+                        "value": "10"
+                    },
+                    {
+                        "label": "TIN [Tax Payer Identification Number]",
+                        "value": "11"
+                    },
+                    {
+                        "label": "UIDIA / Aadhar letter",
+                        "value": "12"
+                    },
+                    {
+                        "label": "US GIIN",
+                        "value": "13"
+                    },
+                    {
+                        "label": "TIN[Tax Payer Identification Number]",
+                        "value": "14"
+                    },
+                    {
+                        "label": "UIDIA/Aadhar letter",
+                        "value": "15"
+                    }
+                ],
+                "Occupation": [
+                    {
+                        "label": "Agriculturist",
+                        "value": "4"
+                    },
+                    {
+                        "label": "Business",
+                        "value": "1"
+                    },
+                    {
+                        "label": "Business Manufacturing",
+                        "value": "1A"
+                    },
+                    {
+                        "label": "Business Trading",
+                        "value": "1B"
+                    },
+                    {
+                        "label": "Forex Dealer",
+                        "value": "43"
+                    },
+                    {
+                        "label": "Government Service",
+                        "value": "2A"
+                    },
+                    {
+                        "label": "Housewife",
+                        "value": "6"
+                    },
+                    {
+                        "label": "Non-Government Service",
+                        "value": "2B"
+                    },
+                    {
+                        "label": "Not Specified",
+                        "value": "9"
+                    },
+                    {
+                        "label": "Others",
+                        "value": "8"
+                    },
+                    {
+                        "label": "Private Sector Service",
+                        "value": "41"
+                    },
+                    {
+                        "label": "Profession - Engineering",
+                        "value": "3C"
+                    },
+                    {
+                        "label": "Profession - Finance",
+                        "value": "3B"
+                    },
+                    {
+                        "label": "Profession - Legal",
+                        "value": "3D"
+                    },
+                    {
+                        "label": "Profession - Medicine",
+                        "value": "3A"
+                    },
+                    {
+                        "label": "Professional",
+                        "value": "3"
+                    },
+                    {
+                        "label": "Public Sector / Government Service",
+                        "value": "42"
+                    },
+                    {
+                        "label": "Retired",
+                        "value": "5"
+                    },
+                    {
+                        "label": "Service",
+                        "value": "2"
+                    },
+                    {
+                        "label": "Student",
+                        "value": "7"
+                    }
+                ],
+                "PaymentMechanism": [
+                    {
+                        "label": "CHEQUE",
+                        "value": "Q"
+                    },
+                    {
+                        "label": "RTGS/NEFT",
+                        "value": "TR"
+                    },
+                    {
+                        "label": "ONLINE",
+                        "value": "OL"
+                    },
+                    {
+                        "label": "DEMAND DRAFT",
+                        "value": "D"
+                    },
+                    {
+                        "label": "Debit Mandate(OTM)",
+                        "value": "M"
+                    },
+                    {
+                        "label": "Debit Mandate",
+                        "value": "M"
+                    }
+                ],
+                "Relationship": [
+                    {
+                        "label": "Father",
+                        "value": "9"
+                    },
+                    {
+                        "label": "Mother",
+                        "value": "2"
+                    },
+                    {
+                        "label": "Wife",
+                        "value": "3"
+                    },
+                    {
+                        "label": "Husband",
+                        "value": "10"
+                    },
+                    {
+                        "label": "Son",
+                        "value": "4"
+                    },
+                    {
+                        "label": "Daughter",
+                        "value": "5"
+                    },
+                    {
+                        "label": "Father-in-law",
+                        "value": "18"
+                    },
+                    {
+                        "label": "Mother-in-law",
+                        "value": "12"
+                    },
+                    {
+                        "label": "Aunt",
+                        "value": "7"
+                    },
+                    {
+                        "label": "Uncle",
+                        "value": "6"
+                    },
+                    {
+                        "label": "Brother",
+                        "value": "17"
+                    },
+                    {
+                        "label": "Sister",
+                        "value": "11"
+                    },
+                    {
+                        "label": "Grand Father",
+                        "value": "15"
+                    },
+                    {
+                        "label": "Grand Mother",
+                        "value": "16"
+                    },
+                    {
+                        "label": "Others",
+                        "value": "1009"
+                    },
+                    {
+                        "label": "Self",
+                        "value": "1"
+                    },
+                    {
+                        "label": "Sister-in-law",
+                        "value": "13"
+                    },
+                    {
+                        "label": "Cousin",
+                        "value": "14"
+                    },
+                    {
+                        "label": "Partner",
+                        "value": "8"
+                    }
+                ],
+                "SourceWealth": [
+                    {
+                        "label": "Ancestral Property",
+                        "value": "04"
+                    },
+                    {
+                        "label": "Business Income",
+                        "value": "02"
+                    },
+                    {
+                        "label": "Gift",
+                        "value": "03"
+                    },
+                    {
+                        "label": "Others",
+                        "value": "08"
+                    },
+                    {
+                        "label": "Prize Money",
+                        "value": "06"
+                    },
+                    {
+                        "label": "Rental Income",
+                        "value": "05"
+                    },
+                    {
+                        "label": "Royalty",
+                        "value": "07"
+                    },
+                    {
+                        "label": "Salary",
+                        "value": "01"
+                    }
+                ],
+                "TaxProfile": [
+                    {
+                        "label": "Individual",
+                        "value": "01"
+                    },
+                    {
+                        "label": "On Behalf Of Minor",
+                        "value": "02"
+                    },
+                    {
+                        "label": "HUF",
+                        "value": "03"
+                    },
+                    {
+                        "label": "NRI (NRO A/C)",
+                        "value": "18"
+                    }
+                ],
+                "TransactionType": [
+                    {
+                        "label": "Additional Purchase",
+                        "value": "AP"
+                    },
+                    {
+                        "label": "Fresh Purchase",
+                        "value": "FP"
+                    },
+                    {
+                        "label": "Redemption",
+                        "value": "R"
+                    },
+                    {
+                        "label": "SWITCH IN",
+                        "value": "SI"
+                    },
+                    {
+                        "label": "SWITCH OUT",
+                        "value": "SO"
+                    }
+                ]
+            }
+        },
+        "success": true
+    }
+}

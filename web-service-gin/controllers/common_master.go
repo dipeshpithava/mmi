@@ -6,11 +6,14 @@ import (
 	"net/http"
 )
 
-
 type ApiJsonResponose struct{
 	Status string `json:"status"`
 	ApiName string `json:"api_name"` 
 	Data map[string][]JsonData `json:"data"` 
+}
+
+type CommonRequestMaster struct {
+	ApiName string `json:"api_name" binding:"required"`
 }
 
 type JsonData struct{
@@ -23,6 +26,18 @@ type CommonController struct{}
 
 var MFCommonModel = new(models.MFCommonModel)
 func (ctrl CommonController) GetCommonMaster(c *gin.Context){
+	var json CommonRequestMaster
+
+	if err := c.ShouldBindJSON(&json); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	if json.ApiName != "GET_COMMON_MASTER" {
+		c.AbortWithStatusJSON(http.StatusNotAcceptable, gin.H{"err": "API DETAILS INCORRECT"})
+		return
+	}
+
 	results,err := MFCommonModel.GetCommonMFAll()
 
 	catToItemSlice := StructToJsonSliceMap{}
