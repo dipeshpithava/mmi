@@ -15,6 +15,7 @@ require (
 	golang.org/x/sys v0.0.0-20211123173158-ef496fb156ab // indirect
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/protobuf v1.27.1 // indirect
+	gopkg.in/h2non/gentleman.v2 v2.0.5 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	mmi.com/controllers v0.0.0-00010101000000-000000000000
 	mmi.com/db v0.0.0-00010101000000-000000000000
