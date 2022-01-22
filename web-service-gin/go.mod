@@ -3,6 +3,8 @@ module mmi/web-service-gin
 go 1.16
 
 require (
+	github.com/aws/aws-sdk-go-v2/config v1.13.0 // indirect
+	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.13.0 // indirect
 	github.com/gin-gonic/gin v1.7.6
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
@@ -13,6 +15,7 @@ require (
 	golang.org/x/sys v0.0.0-20211123173158-ef496fb156ab // indirect
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/protobuf v1.27.1 // indirect
+	gopkg.in/h2non/gentleman.v2 v2.0.5 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	mmi.com/controllers v0.0.0-00010101000000-000000000000
 	mmi.com/db v0.0.0-00010101000000-000000000000
