@@ -1,0 +1,7 @@
+{
+  "name": "MMIBOX",
+  "plugins": [
+    {"name":"sujeet","description":"Sujeet yadav"},
+    {"name":"Dipesh","description":"Dipesh yadav"}
+  ]
+}
