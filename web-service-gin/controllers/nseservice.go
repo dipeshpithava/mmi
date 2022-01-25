@@ -29,7 +29,9 @@ func (ctrl NseServiceController) IINDetails(c *gin.Context) {
 	  return
 	}
 
-	fmt.Printf("Status: %d\n", res.StatusCode)
-	fmt.Printf("Body: %s", res.String())
+	requestId, _ := c.Get("INVESTOR_NAME")
+	fmt.Printf("Status: %d\n", requestId)
 	c.XML(http.StatusOK, res.String())
 }
+
+
