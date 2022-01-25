@@ -4,7 +4,12 @@ URL:
 http://127.0.0.1:8080/v1/isUserExists
 
 Request:
-{"panno": "ABCDE1234F"}
+{
+    "api_name":"IS_USER_EXISTS",
+    "request" : {
+        "pan" : "AJCPT7078C"
+    }
+}
 
 Response:
 
@@ -31,10 +36,39 @@ For new user ->
 ------------------------------------------------------------------------------------------------
 
 URL:
+http://127.0.0.1:8080/v1/signIn
+
+Request:
+{
+    "api_name":"SIGN_IN",
+    "request" : {
+        "pan" : "AJCPT7078C",
+	"password": "ABCD@123"
+    }
+}
+
+Response:
+
+{
+    "response": {
+        "data": "",
+        "message": "Successfully SignIn",
+        "success": true
+    }
+}
+
+------------------------------------------------------------------------------------------------
+
+URL:
 http://127.0.0.1:8080/v1/getUserData
 
 Request:
-{"panno": "ABCDE1234F"}
+{
+    "api_name":"GET_CVL_DATA",
+    "request" : {
+        "pan" : "AJCPT7078C"
+    }
+}
 
 Response:
 

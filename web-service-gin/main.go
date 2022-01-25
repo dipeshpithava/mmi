@@ -22,6 +22,7 @@ func main() {
 		nse := new(controllers.NseServiceController)
 		v1.POST("/getCommonMaster", common.GetCommonMaster)
 		v1.POST("/isUserExists", login.IsUserExists)
+		v1.POST("/signIn", login.SignIn)
 		v1.POST("/getUserData", login.GetUserData)
 		v1.POST("/getCVLData", kyc.CVLApi)
 		v1.GET("/CreateTable", dynamo.TestDynamo)
