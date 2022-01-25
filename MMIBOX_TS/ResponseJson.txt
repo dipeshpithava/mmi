@@ -1,0 +1,454 @@
+1)get all master
+
+Request
+ {"api_name":"GET_COMMON_MASTER"}
+ Response
+
+{
+	"success": true,
+	"response": {
+		"api_name": "GetCommonMaster",
+		"data": {
+			"TransactionType": [{
+				"value": "AP",
+				"label": "Additional Purchase"
+			}, {
+				"value": "FP",
+				"label": "Fresh Purchase"
+			}, {
+				"value": "R",
+				"label": "Redemption"
+			}, {
+				"value": "SI",
+				"label": "SWITCH IN"
+			}, {
+				"value": "SO",
+				"label": "SWITCH OUT"
+			}],
+			"SourceWealth": [{
+				"value": "04",
+				"label": "Ancestral Property"
+			}, {
+				"value": "02",
+				"label": "Business Income"
+			}, {
+				"value": "03",
+				"label": "Gift"
+			}, {
+				"value": "08",
+				"label": "Others"
+			}, {
+				"value": "06",
+				"label": "Prize Money"
+			}, {
+				"value": "05",
+				"label": "Rental Income"
+			}, {
+				"value": "07",
+				"label": "Royalty"
+			}, {
+				"value": "01",
+				"label": "Salary"
+			}],
+			"PaymentMechanism": [{
+				"value": "Q",
+				"label": "CHEQUE"
+			}, {
+				"value": "M",
+				"label": "Debit Mandate(OTM)"
+			}, {
+				"value": "D",
+				"label": "DEMAND DRAFT"
+			}, {
+				"value": "OL",
+				"label": "ONLINE"
+			}, {
+				"value": "TR",
+				"label": "RTGS/NEFT"
+			}],
+			"Occupation": [{
+				"value": "4",
+				"label": "Agriculturist"
+			}, {
+				"value": "1",
+				"label": "Business"
+			}, {
+				"value": "6",
+				"label": "Housewife"
+			}, {
+				"value": "8",
+				"label": "Others"
+			}, {
+				"value": "41",
+				"label": "Private Sector Service"
+			}, {
+				"value": "3",
+				"label": "Professional"
+			}, {
+				"value": "42",
+				"label": "Public Sector / Government Service"
+			}, {
+				"value": "5",
+				"label": "Retired"
+			}, {
+				"value": "2",
+				"label": "Service"
+			}, {
+				"value": "7",
+				"label": "Student"
+			}],
+			"HoldingNature": [{
+				"value": "AS",
+				"label": "Anyone / Survivor"
+			}, {
+				"value": "JO",
+				"label": "Joint"
+			}, {
+				"value": "SI",
+				"label": "Single"
+			}],
+			"ApplicableIncome": [{
+				"value": "31",
+				"label": "Below 1 Lakh"
+			}, {
+				"value": "32",
+				"label": "1 - 5 Lacs"
+			}, {
+				"value": "33",
+				"label": "5 - 10 Lacs"
+			}, {
+				"value": "34",
+				"label": "10 - 25 Lacs"
+			}, {
+				"value": "35",
+				"label": "25 Lacs - 1 Crore"
+			}, {
+				"value": "36",
+				"label": "Above 1 Crore"
+			}],
+			"AccountType": [{
+				"value": "CA",
+				"label": "Current Account"
+			}, {
+				"value": "SB",
+				"label": "Savings Account"
+			}],
+			"TaxProfile": [{
+				"value": "03",
+				"label": "HUF"
+			}, {
+				"value": "01",
+				"label": "Individual"
+			}, {
+				"value": "02",
+				"label": "On Behalf Of Minor"
+			}],
+			"Relationship": [{
+				"value": "17",
+				"label": "Brother"
+			}, {
+				"value": "5",
+				"label": "Daughter"
+			}, {
+				"value": "9",
+				"label": "Father"
+			}, {
+				"value": "18",
+				"label": "Father-in-law"
+			}, {
+				"value": "10",
+				"label": "Spouse"
+			}, {
+				"value": "2",
+				"label": "Mother"
+			}, {
+				"value": "12",
+				"label": "Mother-in-law"
+			}, {
+				"value": "1009",
+				"label": "Others"
+			}, {
+				"value": "11",
+				"label": "Sister"
+			}, {
+				"value": "4",
+				"label": "Son"
+			}],
+			"AddressType": [{
+				"value": "3",
+				"label": "Business"
+			}, {
+				"value": "4",
+				"label": "Registered office"
+			}, {
+				"value": "2",
+				"label": "Residential"
+			}, {
+				"value": "1",
+				"label": "Residential or Business"
+			}, {
+				"value": "5",
+				"label": "Unspecified"
+			}],
+			"BusinessUnit": [{
+				"value": "11",
+				"label": "ABMU"
+			}, {
+				"value": "2",
+				"label": "B2B"
+			}, {
+				"value": "3",
+				"label": "B2C"
+			}, {
+				"value": "12",
+				"label": "BPG WORKSITE"
+			}, {
+				"value": "4",
+				"label": "Corporate"
+			}, {
+				"value": "5",
+				"label": "Group"
+			}, {
+				"value": "7",
+				"label": "SE"
+			}, {
+				"value": "8",
+				"label": "UM"
+			}, {
+				"value": "9",
+				"label": "Walk"
+			}, {
+				"value": "10",
+				"label": "WMS"
+			}],
+			"Identification": [{
+				"value": "1",
+				"label": "Company Identification Number"
+			}, {
+				"value": "2",
+				"label": "Driving License"
+			}, {
+				"value": "3",
+				"label": "Election ID Card"
+			}, {
+				"value": "4",
+				"label": "Global Entity Identification Number"
+			}, {
+				"value": "5",
+				"label": "ID Card"
+			}, {
+				"value": "7",
+				"label": "Not categorized"
+			}, {
+				"value": "6",
+				"label": "NREGA Job Card"
+			}, {
+				"value": "8",
+				"label": "Others"
+			}, {
+				"value": "9",
+				"label": "PAN Card"
+			}, {
+				"value": "10",
+				"label": "Passport"
+			}, {
+				"value": "11",
+				"label": "TIN [Tax Payer Identification Number]"
+			}, {
+				"value": "14",
+				"label": "TIN[Tax Payer Identification Number]"
+			}, {
+				"value": "12",
+				"label": "UIDIA / Aadhar letter"
+			}, {
+				"value": "15",
+				"label": "UIDIA/Aadhar letter"
+			}, {
+				"value": "13",
+				"label": "US GIIN"
+			}]
+		},
+		"msg": "Data Found Successfully"
+	}
+}
+
+
+2) CVL api
+
+Request
+{
+    PAN:"AENPY8183R"
+}
+Response
+
+{
+    pan_number:"AENPY8183R",
+    kyc_name:"Sujeet yadav",
+    kyc_status:"Y" //"Y" kyc user "N" no kyc user,
+    msg:""
+}
+
+3) kyc page submit Request
+    Request
+    {
+      panNO:"AENPY8183R"
+      name:"sujeet",
+      kycStatus:"Y",
+      formStage:"K" //k means kyc page
+    }
+    Respose 
+    {
+        msg:"data saved Successfully"
+    }
+
+4) personal Detail page 
+
+ Request
+    {
+        formStage:"P"
+      first:{  
+        DOB:"10/06/1991"
+        gender:"M",
+        Occupation:"private job",
+        annualIncome:"4lack to 5 lacks",
+        sourseofIncome:"salary"
+        politicallyExposed:true
+      }
+    }
+    Respose 
+    {
+        msg:"data saved Successfully"
+    }
+
+4) nominee Detail page 
+
+ Request
+    {
+     formStage:"N",   
+      first:{  
+        name:"Bandhana yadav"
+        DOB:"10/06/1991"
+        allocation:"40",
+        relationship:"spouse"
+       
+      },
+      second:{  
+        name:"Bandhana yadav"
+        DOB:"10/06/1991"
+        allocation:"20",
+        relationship:"spouse"
+       
+      }
+      third:{  
+        name:"Bandhana yadav"
+        DOB:"10/06/1991"
+        allocation:"40",
+        relationship:"spouse"
+       
+      }
+    }
+    Respose 
+    {
+        msg:"data saved Successfully"
+    }
+
+
+5)
+  get data from pincodewise
+
+  Request
+  {pinode:'400104"},
+
+  Response
+   {
+		"api_name": "GetCityStateCountryByPinCode",
+		"data": {
+			"pincodeid": 2467,
+			"pincode": "400104",
+			"cityid": 429,
+			"cityname": "Mumbai",
+			"statecode": "MA",
+			"statename": "Maharashtra",
+			"countrycode": "IND",
+			"countryname": "India"
+		},
+		"msg": "Data Retrieved Successfully"
+	}
+
+ 6) Correspondence Details submit api
+
+ {
+		"data": {
+			"uuid": "",
+			"pan_number": "AENPY8183R",
+			"data": {
+				"Address": "goregona west",
+				"city": "Mumbai",
+				"State": "MA",
+				"Country": "IND",
+				"cityName": "Mumbai",
+				"stateName": "Maharashtra",
+				"countryName": "India",
+				"Pincode": "400104",
+				"PageUrl": "",
+				"FormStage": "C"
+			}
+		}
+
+7) Bank page
+get IFSC data
+
+Request:
+   {"IFSCCode":"HDFC0000001","bankcity":"","bankname":""}
+Response
+ [{
+			"NBAllowed": true,
+			"DBAllowed": true,
+			"ifsccodeid": 86294,
+			"optifsccodeid": 62667,
+			"nsebankcode": "HDF",
+			"bankid": 503,
+			"branchname": "TULSIANI CHMBRS - NARIMAN PT",
+			"bankname": "HDFC Bank Ltd",
+			"optbankid": 503,
+			"ifsccode": "HDFC0000001",
+			"micrcode": "400240003",
+			"city": "GREATER MUMBAI",
+			"district": "MUMBAI",
+			"state": "MAHARASHTRA",
+			"address": "101-104 TULSIANI CHAMBERSFREE PRESS JOURNAL MARGNARIMAN POINTMUMBAIMAHARASHTRA400 021",
+			"contactnumber": "9890603333",
+			"isactive": true
+		}]   
+
+8)bak page submit api
+
+Request
+{
+    ifscCode:"",
+    bankName:"",
+    branchName:"
+    accountNumber:"",
+    mandateExpireData:"10/06/1991",
+    mandateAmount:"1000000",
+    formState:"B"
+
+}
+  Respose 
+    {
+        msg:"data saved Successfully"
+    }
+
+9)get profile page :
+
+{
+    uuid:"1234",
+}
+
+
+10) get userData
+
+Request
+{
+    uuid:"1234",
+}
