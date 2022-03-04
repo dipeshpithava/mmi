@@ -6,7 +6,7 @@ import (
 	ddb "mmi.com/db"
 )
 
-const tableName = "go-dynamodb-local-test"
+const tableName = "go-dynamodb-onboarding-data"
 
 type DynamoController struct{}
 
