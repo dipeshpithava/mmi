@@ -28,6 +28,13 @@ func main() {
 		v1.GET("/CreateTable", dynamo.TestDynamo)
 		v1.GET("/IINDetails", nse.IINDetails)
 	}
+
+	v2 := r.Group("/onboarding")
+	{
+		onboarding := new(controllers.OnboardingController)
+		v2.POST("/storePersonalData", onboarding.StorePersonalData)
+	}
+
 	r.Run(":8080")
 }
 
