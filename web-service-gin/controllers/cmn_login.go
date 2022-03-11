@@ -55,7 +55,7 @@ func (ctrl LoginController) IsUserExists(c *gin.Context){
 }
 
 func (ctrl LoginController) SignIn(c *gin.Context){
-	var form forms.RequestMaster
+	var form forms.RequestMasterSignIn
 	if validationErr := c.ShouldBindJSON(&form); validationErr != nil {
 		message := kycForm.GetSignInDataRequestValidate(validationErr)
 		c.AbortWithStatusJSON(http.StatusNotAcceptable, gin.H{"message": message})
