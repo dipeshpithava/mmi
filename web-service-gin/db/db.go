@@ -18,7 +18,7 @@ var db *gorp.DbMap
 //Init ...
 func Init() {
 
-	dbinfo := fmt.Sprintf("user=%s password=%s dbname=%s sslmode=disable", "dipesh", "root", "postgres")
+	dbinfo := fmt.Sprintf("user=%s password=%s dbname=%s sslmode=disable", "postgres", "root", "postgres")
 	fmt.Printf(dbinfo)
 	var err error
 	db, err = ConnectDB(dbinfo)

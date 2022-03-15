@@ -29,10 +29,11 @@ func (ctrl OnboardingController) StorePersonalData(c *gin.Context) {
 		return
 	}
 
+
 	item := map[string]types.AttributeValue{
-		"PK":     &types.AttributeValueMemberS{Value: "PK1"},
-		"SK":     &types.AttributeValueMemberS{Value: "A"},
-		"Filler": &types.AttributeValueMemberS{Value: form.Request.FormStage},
+		"PK":     &types.AttributeValueMemberS{Value: "AJCPT7078K"},
+		"SK":     &types.AttributeValueMemberS{Value: "3"},
+		"Filler": &types.AttributeValueMemberS{Value: form.Request},
 	}
 	err := putItem(d, tableName, item)
 	if err != nil {
