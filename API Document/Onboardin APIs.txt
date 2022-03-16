@@ -27,3 +27,32 @@ RESPONSE :
         "success": true
     }
 }
+
+
+
+URL : http://localhost:8080/onboarding/storeNomineeData
+
+REQUEST :
+{
+    "api_name":"STORE_NOMINEE_DATA",
+    "request" : {
+        "formStage" : "N",
+        "first":{  
+            "name" :"Bandhana yadav",
+            "DOB" :"10/06/1991",
+            "allocation" :"40",
+            "relationship" :"spouse"
+        }
+    }
+}
+
+RESPONSE :
+{
+    "api_response": {
+        "response": {
+            "api_name": "STORE_NOMINEE_DATA",
+            "msg": "data saved Successfully"
+        },
+        "success": true
+    }
+}
