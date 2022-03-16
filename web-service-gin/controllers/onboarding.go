@@ -61,14 +61,6 @@ func (ctrl OnboardingController) StorePersonalData(c *gin.Context) {
 	if errL != nil {
 		c.AbortWithStatusJSON(http.StatusNotAcceptable, gin.H{"err": errL})
 	}
-
-	// var data = gin.H{
-	// 	"kyc_name": "Test Yadav",
-	// 	"pan": form.Request.PAN,
-	// 	"kyc_status": "Y",
-	// 	"msg" : "",
-	// }
-
 	var response = gin.H{
 		"success": bool(true),
 		"response": gin.H{
@@ -79,6 +71,60 @@ func (ctrl OnboardingController) StorePersonalData(c *gin.Context) {
 
 	c.PureJSON(http.StatusOK, gin.H{"api_response": response})
 }
+
+func (ctrl OnboardingController) StoreNomineeData(c *gin.Context) {
+	var form forms.RequestNomineeMaster
+	d := ddb.CreateLocalClient()
+	if validationErr := c.ShouldBindJSON(&form); validationErr != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": validationErr.Error()})
+		return
+	}
+
+	if form.ApiName != "STORE_NOMINEE_DATA" {
+		c.AbortWithStatusJSON(http.StatusNotAcceptable, gin.H{"err": "API DETAILS INCORRECT"})
+		return
+	}
+
+	out, err := json.Marshal(form.Request)
+	if err != nil {
+		// panic(err)
+		c.AbortWithStatusJSON(http.StatusNotAcceptable, gin.H{"err": err})
+	}
+
+	item := DynamoStructOnboarding{
+		"AJCPT7078O",
+		"11",
+		string(out),
+	}
+
+
+	// Testing PUTITEM CODE
+	// item := map[string]types.AttributeValue{
+	// 	"PK":     &types.AttributeValueMemberS{Value: "AJCPT7078Z"},
+	// 	"SK":     &types.AttributeValueMemberS{Value: "10"},
+	// 	"Filler": &types.AttributeValueMemberS{Value: string(out)},
+	// }
+
+	// fmt.Print(item)
+	// fmt.Print(d)
+
+	errL := UpdateItem(d, tableName, item)
+	if errL != nil {
+		c.AbortWithStatusJSON(http.StatusNotAcceptable, gin.H{"err": errL})
+	}
+	var response = gin.H{
+		"success": bool(true),
+		"response": gin.H{
+			"api_name" : form.ApiName,
+			"msg" : "data saved Successfully",
+		},
+	}
+
+	c.PureJSON(http.StatusOK, gin.H{"api_response": response})
+}
+
+
+
 
 func putItem(d *dynamodb.Client, tableName string, item map[string]types.AttributeValue) error {
 	_, err := d.PutItem(context.TODO(), &dynamodb.PutItemInput{

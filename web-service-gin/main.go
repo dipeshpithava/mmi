@@ -33,6 +33,7 @@ func main() {
 	{
 		onboarding := new(controllers.OnboardingController)
 		v2.POST("/storePersonalData", onboarding.StorePersonalData)
+		v2.POST("/storeNomineeData", onboarding.StoreNomineeData)
 	}
 
 	r.Run(":8080")

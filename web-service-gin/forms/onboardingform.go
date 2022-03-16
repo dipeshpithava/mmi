@@ -23,3 +23,23 @@ type RequestPersonalMaster struct {
 }
 
 
+type NomineeData struct {
+	Name string `json:"name"` 
+	DOB string `json:"dOB"` 
+	Allocation string `json:"allocation"` 
+	Relationship string `json:"relationship"` 
+}
+
+type JsonRequestInheritNominee struct {
+	FormStage string `json:"formStage" binding:"required"`
+	First NomineeData `json:"first" binding:"required"`
+	Second NomineeData `json:"second"`
+	Third NomineeData `json:"third"`
+}
+
+type RequestNomineeMaster struct {
+	ApiName string `json:"api_name" binding:"required"`
+	Request JsonRequestInheritNominee `json:"request" binding:"required"` 
+}
+
+
