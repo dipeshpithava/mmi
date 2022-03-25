@@ -1,0 +1,1 @@
+insert into cmn.usersession (uid) values (1)
